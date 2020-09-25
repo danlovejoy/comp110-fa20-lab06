@@ -6,20 +6,19 @@ Exercises from lab 06, dealing with string accumualators.
 
 
 def create_edited_string(text_with_edit_marks):
-    """ Function that returns a sting with editing applied. """
+    """Function that returns a sting with editing applied. """
 
-    final_str = ""
+    #final_str = ""
 
-    for ch in text_with_edit_marks:
-        if ch == ("!"):
-            final_str = final_str
-        elif ch == ("^"):
-            final_str = final_str
-        elif ch == ("_"):
-            final_str = final_str
-        else: 
-
-            final_str = final_str + ch
+    #for ch in text_with_edit_marks:
+    if ch == ("!"):
+        final_str = final_str
+    elif ch == ("^"):
+        final_str = final_str
+    elif ch == ("_"):
+        final_str = final_str
+    else: 
+        final_str = final_str + ch
         
     return final_str
 
@@ -54,6 +53,17 @@ def test_create_edited_string():
 
     num_passed = 0
     num_failed = 0
+
+    caps_lock_mode = False
+    inal_str = ""
+
+    for ch in ():
+        if ch == ("^"):
+            caps_lock_mode = True
+        elif caps_lock_mode == True:
+            final_str = final_str + ch.upper()
+        else: 
+            final_str = final_str
 
     for i in range(len(test_cases)):
         # get the input and expected result
